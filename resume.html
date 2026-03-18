@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikita Barinov · ML Engineer</title>
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Font: Inter clean & modern -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Inter", sans-serif;
+            background-color: #f8fafc;
+            color: #0b1d2e;
+            line-height: 1.5;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+            padding: 2.2rem 2.5rem;
+        }
+
+        /* header */
+        .name-title {
+            text-align: center;
+            margin-bottom: 1.8rem;
+        }
+        .name-title h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: #0f2b3d;
+            margin-bottom: 0.5rem;
+        }
+        .contact-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.8rem;
+            font-size: 1rem;
+            color: #2c4559;
+            background: #f0f4f8;
+            padding: 0.8rem 1.8rem;
+            border-radius: 60px;
+            margin-top: 0.5rem;
+        }
+        .contact-bar a {
+            color: #1d4e6f;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.2s;
+        }
+        .contact-bar a:hover {
+            color: #0a2942;
+            text-decoration: underline;
+        }
+        .contact-bar i {
+            font-size: 1.1rem;
+            width: 1.2rem;
+            color: #2b6c9e;
+        }
+
+        /* sections */
+        section {
+            margin: 2.2rem 0 1.8rem 0;
+        }
+        .section-title {
+            font-size: 1.6rem;
+            font-weight: 650;
+            letter-spacing: -0.01em;
+            border-bottom: 3px solid #cbd5e1;
+            padding-bottom: 0.3rem;
+            margin-bottom: 1.2rem;
+            color: #163A5F;
+        }
+
+        /* education blocks */
+        .edu-item {
+            margin-bottom: 1rem;
+        }
+        .edu-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #0b2a41;
+        }
+        .edu-sub {
+            font-weight: 400;
+            color: #3d5a73;
+            margin-top: 0.1rem;
+            font-size: 0.98rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .edu-date {
+            color: #4b6f8c;
+            font-weight: 400;
+            font-size: 0.95rem;
+        }
+
+        /* experience / project cards */
+        .exp-item, .project-item, .course-item {
+            margin-bottom: 2rem;
+        }
+        .exp-header, .project-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+        }
+        .exp-title {
+            font-size: 1.3rem;
+            font-weight: 650;
+            color: #12344A;
+        }
+        .exp-title a {
+            color: #12344A;
+            text-decoration: none;
+            border-bottom: 1px dotted #8aa9c9;
+        }
+        .exp-title a:hover {
+            color: #003b6f;
+            border-bottom: 1px solid;
+        }
+        .exp-date {
+            font-weight: 400;
+            color: #4f6b85;
+            background: #e9edf2;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+        .exp-sub {
+            font-style: italic;
+            color: #2f5670;
+            margin: 0.2rem 0 0.5rem 0;
+            font-size: 1rem;
+        }
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem 0.6rem;
+            margin: 0.7rem 0 0.8rem 0;
+        }
+        .skill {
+            background: #e2eaf1;
+            color: #113750;
+            padding: 0.25rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            border: 1px solid #bdd3e8;
+            transition: 0.1s;
+        }
+        .skill:hover {
+            background: #d0e0ef;
+        }
+
+        /* lists inside descriptions */
+        .desc-list {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            margin-top: 0.2rem;
+            color: #1d3e5c;
+            font-size: 0.97rem;
+        }
+        .desc-list li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* skills section grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 2rem;
+        }
+        .skill-cat {
+            margin-bottom: 1rem;
+        }
+        .skill-cat h4 {
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #0d3853;
+            border-left: 5px solid #7ca2c0;
+            padding-left: 0.7rem;
+            margin-bottom: 0.5rem;
+        }
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem 0.8rem;
+        }
+        .skill-items span {
+            background: white;
+            border: 1px solid #b9cfec;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* about me */
+        .about-text {
+            background: #f0f6fd;
+            padding: 1.4rem 2rem;
+            border-radius: 30px;
+            color: #1a3d5a;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-top: 0.5rem;
+        }
+
+        /* mobile fine-tuning */
+        @media (max-width: 650px) {
+            .container { padding: 1.5rem; }
+            .name-title h1 { font-size: 2.3rem; }
+            .contact-bar { flex-direction: column; align-items: center; gap: 0.5rem; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .exp-header { flex-direction: column; align-items: start; gap: 0.3rem; }
+            .edu-header { flex-direction: column; align-items: start; }
+        }
+        /* small touches */
+        hr {
+            border: none;
+            border-top: 2px solid #dde7f0;
+            margin: 0.5rem 0;
+        }
+        .fa-star-of-life { font-size: 0.7rem; color: #4f7da3; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- header -->
+    <div class="name-title">
+        <h1>Nikita Barinov</h1>
+        <div class="contact-bar">
+            <a href="tel:+79051330850"><i class="fas fa-phone-alt"></i> +7 (905) 133-08-50</a>
+            <a href="mailto:barinov.na@phystech.edu"><i class="fas fa-envelope"></i> barinov.na@phystech.edu</a>
+            <span><i class="fas fa-map-marker-alt"></i> Moscow, Russia</span>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <section>
+        <h2 class="section-title">🎓 Education</h2>
+        <div class="edu-item">
+            <div class="edu-header">
+                <span>Moscow Institute of Physics and Technology (MIPT)</span>
+                <span class="edu-date">Sep 2020 – Present</span>
+            </div>
+            <div class="edu-sub">
+                Student of Applied Mathematics, Computer Science and Economy
+            </div>
+        </div>
+        <div class="edu-item">
+            <div class="edu-header">
+                <span>Department of Data Analysis, MIPT & Yandex SDA</span>
+                <span class="edu-date">Sep 2022 – May 2024</span>
+            </div>
+            <div class="edu-sub">
+                Specialization: Data Analysis (Yandex School of Data Analysis)
+            </div>
+        </div>
+        <div class="edu-item">
+            <div class="edu-header">
+                <span>Lyceum №2, Rybinsk</span>
+                <span class="edu-date">Sep 2009 – Jun 2020</span>
+            </div>
+            <div class="edu-sub">
+                Physics and Mathematics class
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section>
+        <h2 class="section-title">💼 Experience</h2>
+
+        <!-- Yandex -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-title">Intern ML Engineer @ Yandex</span>
+                <span class="exp-date">Jun 2023 – Nov 2023</span>
+            </div>
+            <div class="skill-tags">
+                <span class="skill">Python</span><span class="skill">SQL</span><span class="skill">RecSys</span><span class="skill">Transformers</span><span class="skill">Embeddings</span><span class="skill">Feature Engineering</span><span class="skill">Classic ML</span><span class="skill">Catboost</span><span class="skill">Pandas/Numpy</span>
+            </div>
+            <ul class="desc-list">
+                <li>Improved next-track prediction in Yandex Music by integrating Transformer-based embeddings into the recommendation pipeline.</li>
+            </ul>
+        </div>
+
+        <!-- Sber AI -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-title">Data Scientist @ Sber AI</span>
+                <span class="exp-date">Feb 2024 – Aug 2024</span>
+            </div>
+            <div class="skill-tags">
+                <span class="skill">Python</span><span class="skill">PyTorch</span><span class="skill">Hugging Face</span><span class="skill">Computer Vision</span><span class="skill">Generative Models</span><span class="skill">Segmentation</span><span class="skill">Object Detection</span><span class="skill">Linux</span>
+            </div>
+            <ul class="desc-list">
+                <li>Built an instruct image-editing dataset pipeline using Stable Diffusion, Grounded-SAM, LLaMA-3, and LLaVA-NeXT; organized storage with WebDataset and accelerated inference via OneDiff.</li>
+                <li>Scaled training and inference with distributed setup using Hugging Face Accelerate.</li>
+            </ul>
+        </div>
+
+        <!-- Tinkoff AI Center -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-title">ML Engineer @ Tinkoff AI Center</span>
+                <span class="exp-date">Sep 2024 – Sep 2025</span>
+            </div>
+            <div class="skill-tags">
+                <span class="skill">Python</span><span class="skill">SQL</span><span class="skill">NLP</span><span class="skill">RecSys</span><span class="skill">Transformers</span><span class="skill">Airflow</span><span class="skill">Docker</span><span class="skill">Linux</span><span class="skill">ML Pipelines</span><span class="skill">Experiment Tracking</span><span class="skill">Catboost</span>
+            </div>
+            <ul class="desc-list">
+                <li>Trained Transformer-based sequential recommender models and deployed them into candidate generation.</li>
+                <li>Maintained and improved production recommendation pipelines (batch inference, monitoring, and retraining automation).</li>
+            </ul>
+        </div>
+
+        <!-- VK AI -->
+        <div class="exp-item">
+            <div class="exp-header">
+                <span class="exp-title">ML Engineer @ VK AI</span>
+                <span class="exp-date">Sep 2025 – Present</span>
+            </div>
+            <div class="skill-tags">
+                <span class="skill">Python</span><span class="skill">SQL</span><span class="skill">RecSys</span><span class="skill">LLM Fine-tuning</span><span class="skill">Embeddings</span><span class="skill">Airflow</span><span class="skill">MLflow</span><span class="skill">Spark/PySpark</span><span class="skill">Docker</span><span class="skill">Linux</span><span class="skill">Sklearn</span>
+            </div>
+            <ul class="desc-list">
+                <li>Developed multimodal content models to generate hypotheses and data collection strategies in predefined formats.</li>
+                <li>Fine-tuned LLMs on internal data to improve text embedding space; ran 100+ experiments and increased dataset diversity by 20%.</li>
+                <li>Trained relevance VLM, improved previous version on +30% recall.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section>
+        <h2 class="section-title">🔬 Projects</h2>
+
+        <div class="project-item">
+            <div class="exp-header">
+                <span class="exp-title"><a href="https://github.com/rybinsky/paper/tree/main" target="_blank">The effect of distilling models in training on distilled data</a></span>
+                <span class="exp-date">Sep 2023 – Dec 2023</span>
+            </div>
+            <div class="skill-tags">
+                <span class="skill">Python</span><span class="skill">Computer Vision</span><span class="skill">LaTeX</span>
+            </div>
+            <ul class="desc-list">
+                <li>Written a <strong>paper</strong> about influence of knowledge distillation while training on distilled dataset. Presented at <a href="https://mmro.ru" target="_blank">MMPR-2023</a> conference.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="exp-header">
+                <span class="exp-title"><a href="https://github.com/intsystems/2023-Project-134" target="_blank">Generative Data Augmentation</a></span>
+                <span class="exp-date">Jan 2024 – Aug 2024</span>
+            </div>
+            <div class="skill-tags">
+                <span class="skill">Python</span><span class="skill">Computer Vision</span><span class="skill">LaTeX</span><span class="skill">Diffusion Models</span><span class="skill">LLMs</span>
+            </div>
+            <ul class="desc-list">
+                <li>A paper about generative data augmentation.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="exp-header">
+                <span class="exp-title"><a href="https://github.com/rybinsky/rag_diploma" target="_blank">RAG approaches comparison</a></span>
+                <span class="exp-date">Sep 2025 – Present</span>
+            </div>
+            <div class="skill-tags">
+                <span class="skill">Python</span><span class="skill">RAG</span><span class="skill">langchain</span><span class="skill">LLM API</span><span class="skill">Kubernetes</span>
+            </div>
+            <ul class="desc-list">
+                <li>Implemented vanilla, graph, agentic RAG approaches.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="exp-header">
+                <span class="exp-title"><a href="https://github.com/rybinsky/audio_qa" target="_blank">Audio Question Answering</a></span>
+                <span class="exp-date">Jan 2026 – Feb 2026</span>
+            </div>
+            <div class="skill-tags">
+                <span class="skill">Python</span><span class="skill">torchaudio</span><span class="skill">PyTorch</span><span class="skill">LLM</span><span class="skill">Data Generation</span><span class="skill">Huggingface</span>
+            </div>
+            <ul class="desc-list">
+                <li>Implemented language-audio adapter architecture and finetuned it on audio QA task.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- COURSES -->
+    <section>
+        <h2 class="section-title">📘 Courses</h2>
+        <div class="course-item">
+            <div class="exp-header">
+                <span class="exp-title">YSDA Speech Processing Course</span>
+                <span class="exp-date">Sep 2025 – Jan 2026</span>
+            </div>
+            <div class="exp-sub">Yandex School of Data Analysis</div>
+            <div class="skill-tags">
+                <span class="skill">Python</span><span class="skill">Deep learning</span><span class="skill">VAD</span><span class="skill">SED</span><span class="skill">CTC</span><span class="skill">Transfer learning</span><span class="skill">RNN-T</span><span class="skill">ECAPA-TDNN</span><span class="skill">ASR</span>
+            </div>
+            <ul class="desc-list">
+                <li>Implemented and trained different DSP models, such as ECAPA-TDNN, RNN-Transducer, finetuned ASR models.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- SKILLS (detailed) -->
+    <section>
+        <h2 class="section-title">🧰 Skills & knowledge</h2>
+        <div class="skills-grid">
+            <div class="skill-cat">
+                <h4>Languages</h4>
+                <div class="skill-items">
+                    <span>Python</span> <span>LaTeX</span> <span>SQL</span> <span>bash</span> <span>C</span> <span>C++</span> <span>Java</span>
+                </div>
+            </div>
+            <div class="skill-cat">
+                <h4>Technologies</h4>
+                <div class="skill-items">
+                    <span>Git</span> <span>Linux</span> <span>Docker</span> <span>ClearML</span> <span>Airflow</span> <span>PySpark</span>
+                </div>
+            </div>
+            <div class="skill-cat">
+                <h4>Knowledge areas</h4>
+                <div class="skill-items">
+                    <span>Algorithms & Data Structures</span> <span>Classic ML</span> <span>Deep Learning</span> <span>Computer Vision</span> <span>Probability Theory</span> <span>Applied Statistics</span>
+                </div>
+            </div>
+            <div class="skill-cat">
+                <h4>Theoretical CS</h4>
+                <div class="skill-items">
+                    <span>Programming Languages Realization Theory</span> <span>Algorithms & Calculation Models</span> <span>Databases</span> <span>Fundamental Algorithms</span> <span>Formal Systems Theory</span> <span>Discrete Optimization</span>
+                </div>
+            </div>
+            <div class="skill-cat" style="grid-column: span 2;">
+                <h4>Mathematics</h4>
+                <div class="skill-items">
+                    <span>Advanced Calculus</span> <span>Harmonic Analysis</span> <span>Multiple Integrals</span> <span>Field Theory</span> <span>Linear Algebra</span> <span>Higher Algebra</span> <span>Analytical Geometry</span> <span>Differential Equations</span> <span>Matrix Calculations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT ME -->
+    <section>
+        <h2 class="section-title">👤 About me</h2>
+        <div class="about-text">
+            I am a Master’s graduate of MIPT and currently work as a Machine Learning Engineer at VK. I have experience across multiple Big Tech companies, where I worked on both research-driven tasks and applied business projects. My background includes developing and deploying machine learning solutions in production, collaborating with cross-functional teams, and translating research ideas into practical systems. <br><br>
+            At the moment, my main interests lie in Retrieval-Augmented Generation (RAG) systems and machine learning for audio. I enjoy working at the intersection of research and real-world applications, quickly learning new approaches, and tackling complex problems with a pragmatic mindset.
+        </div>
+    </section>
+
+    <!-- tiny footnote: last updated -->
+    <div style="text-align: right; font-size: 0.8rem; color: #8aa0b5; margin-top: 1.5rem;">
+        <i class="fas fa-pen"></i> editable homepage · 2026
+    </div>
+</div>
+<!-- everything is plain HTML/CSS — change text directly, save and share -->
+</body>
+</html>
