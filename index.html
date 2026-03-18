@@ -294,68 +294,133 @@
     </section>
 
     <!-- EXPERIENCE -->
+    <!-- ONLY TEXT CHANGED, STYLES SAME -->
+
+    <!-- EXPERIENCE -->
     <section>
         <h2 class="section-title">💼 Experience</h2>
 
         <!-- Yandex -->
         <div class="exp-item">
             <div class="exp-header">
-                <span class="exp-title">Intern ML Engineer @ Yandex</span>
+                <span class="exp-title">ML Engineer Intern @ Yandex Music</span>
                 <span class="exp-date">Jun 2023 – Nov 2023</span>
             </div>
             <div class="skill-tags">
-                <span class="skill">Python</span><span class="skill">SQL</span><span class="skill">RecSys</span><span class="skill">Transformers</span><span class="skill">Embeddings</span><span class="skill">Feature Engineering</span><span class="skill">Classic ML</span><span class="skill">Catboost</span><span class="skill">Pandas/Numpy</span>
+                <span class="skill">Python</span>
+                <span class="skill">SQL/YQL</span>
+                <span class="skill">RecSys</span>
+                <span class="skill">Transformers</span>
+                <span class="skill">Embeddings</span>
+                <span class="skill">CatBoost</span>
+                <span class="skill">Feature Engineering</span>
+                <span class="skill">Pandas</span>
+                <span class="skill">NumPy</span>
+                <span class="skill">Linux</span>
             </div>
             <ul class="desc-list">
-                <li>Improved next-track prediction in Yandex Music by integrating Transformer-based embeddings into the recommendation pipeline.</li>
+                <li>Integrated Transformer-based track embeddings into next-track prediction pipeline used in production recommendation system.</li>
+                <li>Improved candidate ranking quality by enriching feature space with sequence-aware embeddings.</li>
+                <li>Designed feature generation pipeline in Python + YQL for large-scale logs.</li>
+                <li>Validated improvements using offline metrics and A/B-ready evaluation setup.</li>
             </ul>
         </div>
 
-        <!-- Sber AI -->
+
+        <!-- Sber -->
         <div class="exp-item">
             <div class="exp-header">
                 <span class="exp-title">Data Scientist @ Sber AI</span>
                 <span class="exp-date">Feb 2024 – Aug 2024</span>
             </div>
+
             <div class="skill-tags">
-                <span class="skill">Python</span><span class="skill">PyTorch</span><span class="skill">Hugging Face</span><span class="skill">Computer Vision</span><span class="skill">Generative Models</span><span class="skill">Segmentation</span><span class="skill">Object Detection</span><span class="skill">Linux</span>
+                <span class="skill">Python</span>
+                <span class="skill">PyTorch</span>
+                <span class="skill">Diffusion</span>
+                <span class="skill">Stable Diffusion</span>
+                <span class="skill">Grounded-SAM</span>
+                <span class="skill">LLaMA</span>
+                <span class="skill">LLaVA</span>
+                <span class="skill">Computer Vision</span>
+                <span class="skill">WebDataset</span>
+                <span class="skill">Accelerate</span>
+                <span class="skill">Distributed</span>
+                <span class="skill">Linux</span>
             </div>
+
             <ul class="desc-list">
-                <li>Built an instruct image-editing dataset pipeline using Stable Diffusion, Grounded-SAM, LLaMA-3, and LLaVA-NeXT; organized storage with WebDataset and accelerated inference via OneDiff.</li>
-                <li>Scaled training and inference with distributed setup using Hugging Face Accelerate.</li>
+                <li>Built large-scale instruct image-editing dataset generation pipeline using diffusion models + VLM + LLM.</li>
+                <li>Generated millions of samples using Stable Diffusion + Grounded-SAM + LLaMA + LLaVA-NeXT.</li>
+                <li>Implemented distributed inference pipeline with HuggingFace Accelerate.</li>
+                <li>Optimized storage and loading using WebDataset to support high-throughput training.</li>
+                <li>Accelerated generation pipeline using OneDiff and batching strategies.</li>
             </ul>
         </div>
 
-        <!-- Tinkoff AI Center -->
+
+        <!-- Tinkoff -->
         <div class="exp-item">
             <div class="exp-header">
                 <span class="exp-title">ML Engineer @ Tinkoff AI Center</span>
                 <span class="exp-date">Sep 2024 – Sep 2025</span>
             </div>
+
             <div class="skill-tags">
-                <span class="skill">Python</span><span class="skill">SQL</span><span class="skill">NLP</span><span class="skill">RecSys</span><span class="skill">Transformers</span><span class="skill">Airflow</span><span class="skill">Docker</span><span class="skill">Linux</span><span class="skill">ML Pipelines</span><span class="skill">Experiment Tracking</span><span class="skill">Catboost</span>
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">RecSys</span>
+                <span class="skill">Transformers</span>
+                <span class="skill">Sequential Models</span>
+                <span class="skill">Airflow</span>
+                <span class="skill">Docker</span>
+                <span class="skill">Linux</span>
+                <span class="skill">ML Pipelines</span>
+                <span class="skill">CatBoost</span>
+                <span class="skill">Experiment Tracking</span>
             </div>
+
             <ul class="desc-list">
-                <li>Trained Transformer-based sequential recommender models and deployed them into candidate generation.</li>
-                <li>Maintained and improved production recommendation pipelines (batch inference, monitoring, and retraining automation).</li>
+                <li>Trained Transformer-based sequential recommender models for candidate generation, timespent +7%.</li>
+                <li>Improved recall of candidate generation stage by introducing sequence-aware embeddings.</li>
+                <li>Maintained production ML pipelines: batch inference, retraining, monitoring, data validation.</li>
+                <li>Automated training and deployment using Airflow + Docker.</li>
+                <li>Worked with large-scale logs using SQL and internal data storage.</li>
             </ul>
         </div>
 
-        <!-- VK AI -->
+
+        <!-- VK -->
         <div class="exp-item">
             <div class="exp-header">
                 <span class="exp-title">ML Engineer @ VK AI</span>
                 <span class="exp-date">Sep 2025 – Present</span>
             </div>
+
             <div class="skill-tags">
-                <span class="skill">Python</span><span class="skill">SQL</span><span class="skill">RecSys</span><span class="skill">LLM Fine-tuning</span><span class="skill">Embeddings</span><span class="skill">Airflow</span><span class="skill">MLflow</span><span class="skill">Spark/PySpark</span><span class="skill">Docker</span><span class="skill">Linux</span><span class="skill">Sklearn</span>
+                <span class="skill">Python</span>
+                <span class="skill">SQL</span>
+                <span class="skill">LLM</span>
+                <span class="skill">Embeddings</span>
+                <span class="skill">RAG</span>
+                <span class="skill">Multimodal</span>
+                <span class="skill">PyTorch</span>
+                <span class="skill">MLflow</span>
+                <span class="skill">Spark</span>
+                <span class="skill">Airflow</span>
+                <span class="skill">Docker</span>
             </div>
+
             <ul class="desc-list">
-                <li>Developed multimodal content models to generate hypotheses and data collection strategies in predefined formats.</li>
-                <li>Fine-tuned LLMs on internal data to improve text embedding space; ran 100+ experiments and increased dataset diversity by 20%.</li>
-                <li>Trained relevance VLM, improved previous version on +30% recall.</li>
+                <li>Fine-tuned LLM models on internal datasets to improve embedding space quality.</li>
+                <li>Ran 100+ experiments with different training setups, increasing dataset diversity +20%.</li>
+                <li>Developed multimodal models for content understanding and hypothesis generation.</li>
+                <li>Trained relevance VLM and improved recall by +30% compared to previous model.</li>
+                <li>Built pipelines for large-scale experiment tracking using MLflow.</li>
+                <li>Worked with large datasets using Spark / PySpark.</li>
             </ul>
         </div>
+
     </section>
 
     <!-- PROJECTS -->
@@ -364,55 +429,61 @@
 
         <div class="project-item">
             <div class="exp-header">
-                <span class="exp-title"><a href="https://github.com/rybinsky/paper/tree/main" target="_blank">The effect of distilling models in training on distilled data</a></span>
-                <span class="exp-date">Sep 2023 – Dec 2023</span>
-            </div>
-            <div class="skill-tags">
-                <span class="skill">Python</span><span class="skill">Computer Vision</span><span class="skill">LaTeX</span>
-            </div>
-            <ul class="desc-list">
-                <li>Written a <strong>paper</strong> about influence of knowledge distillation while training on distilled dataset. Presented at <a href="https://mmro.ru" target="_blank">MMPR-2023</a> conference.</li>
-            </ul>
-        </div>
-
-        <div class="project-item">
-            <div class="exp-header">
-                <span class="exp-title"><a href="https://github.com/intsystems/2023-Project-134" target="_blank">Generative Data Augmentation</a></span>
-                <span class="exp-date">Jan 2024 – Aug 2024</span>
-            </div>
-            <div class="skill-tags">
-                <span class="skill">Python</span><span class="skill">Computer Vision</span><span class="skill">LaTeX</span><span class="skill">Diffusion Models</span><span class="skill">LLMs</span>
-            </div>
-            <ul class="desc-list">
-                <li>A paper about generative data augmentation.</li>
-            </ul>
-        </div>
-
-        <div class="project-item">
-            <div class="exp-header">
-                <span class="exp-title"><a href="https://github.com/rybinsky/rag_diploma" target="_blank">RAG approaches comparison</a></span>
+                <span class="exp-title">
+                    <a href="https://github.com/rybinsky/rag_diploma" target="_blank">
+                        RAG architectures comparison
+                    </a>
+                </span>
                 <span class="exp-date">Sep 2025 – Present</span>
             </div>
+
             <div class="skill-tags">
-                <span class="skill">Python</span><span class="skill">RAG</span><span class="skill">langchain</span><span class="skill">LLM API</span><span class="skill">Kubernetes</span>
+                <span class="skill">Python</span>
+                <span class="skill">RAG</span>
+                <span class="skill">LangChain</span>
+                <span class="skill">GraphRAG</span>
+                <span class="skill">Agentic RAG</span>
+                <span class="skill">LLM API</span>
+                <span class="skill">Kubernetes</span>
             </div>
+
             <ul class="desc-list">
-                <li>Implemented vanilla, graph, agentic RAG approaches.</li>
+                <li>Implemented vanilla, graph-based and agentic RAG pipelines.</li>
+                <li>Built evaluation framework for multi-hop QA.</li>
+                <li>Used local LLM + embedding server.</li>
+                <li>Compared retrieval quality across different architectures.</li>
             </ul>
         </div>
 
+
         <div class="project-item">
             <div class="exp-header">
-                <span class="exp-title"><a href="https://github.com/rybinsky/audio_qa" target="_blank">Audio Question Answering</a></span>
+                <span class="exp-title">
+                    <a href="https://github.com/rybinsky/audio_qa" target="_blank">
+                        Audio Question Answering
+                    </a>
+                </span>
                 <span class="exp-date">Jan 2026 – Feb 2026</span>
             </div>
+
             <div class="skill-tags">
-                <span class="skill">Python</span><span class="skill">torchaudio</span><span class="skill">PyTorch</span><span class="skill">LLM</span><span class="skill">Data Generation</span><span class="skill">Huggingface</span>
+                <span class="skill">PyTorch</span>
+                <span class="skill">torchaudio</span>
+                <span class="skill">Transformers</span>
+                <span class="skill">Whisper</span>
+                <span class="skill">Qwen</span>
+                <span class="skill">Adapter</span>
+                <span class="skill">Audio</span>
             </div>
+
             <ul class="desc-list">
-                <li>Implemented language-audio adapter architecture and finetuned it on audio QA task.</li>
+                <li>Implemented AudioLLM architecture with Whisper encoder + LLM.</li>
+                <li>Built adapter-based training pipeline.</li>
+                <li>Generated QA dataset from LibriSpeech.</li>
+                <li>Trained model using HuggingFace Trainer.</li>
             </ul>
         </div>
+
     </section>
 
     <!-- COURSES -->
