@@ -1481,6 +1481,57 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="course-card">
+                    <h3
+                        data-en="AI Agents Intensive: From LLM Queries to Agent Systems"
+                        data-ru="Интенсив по ИИ-агентам: от LLM-запросов к агентным системам"
+                    >
+                        AI Agents Intensive: From LLM Queries to Agent Systems
+                    </h3>
+                    <div class="edu-date" data-en="Apr 2026" data-ru="Апр 2026">Apr 2026</div>
+                    <div
+                        class="edu-sub"
+                        data-en="Yandex"
+                        data-ru="Яндекс"
+                    >
+                        Yandex
+                    </div>
+                    <div class="course-skills">
+                        <span>LLM</span><span>AI Agents</span><span>MCP</span
+                        ><span>Multi-Agent Systems</span><span>Guardrails</span
+                        ><span>Memory</span><span>Agent Evaluation</span
+                        ><span>Production Engineering</span>
+                    </div>
+                    <ul class="timeline-list">
+                        <li
+                            data-en="Studied modern AI agent architecture: thought-action-observation cycle, tools, memory, and multi-agent orchestration"
+                            data-ru="Изучил архитектуру современных ИИ-агентов: цикл thought-action-observation, инструменты, память и оркестрацию мультиагентных систем"
+                        >
+                            Studied modern AI agent architecture: thought-action-observation cycle, tools, memory, and multi-agent orchestration
+                        </li>
+                        <li
+                            data-en="Learned production engineering principles: monitoring, scaling, and deploying agent systems under real load"
+                            data-ru="Освоил принципы продакшн-инженерии: мониторинг, масштабирование и развертывание агентных систем под реальной нагрузкой"
+                        >
+                            Learned production engineering principles: monitoring, scaling, and deploying agent systems under real load
+                        </li>
+                        <li style="margin-top: 0.5rem;">
+                            <a
+                                href="documents/agents_week_en.pdf"
+                                download
+                                class="cert-link"
+                                data-en-href="documents/agents_week_en.pdf"
+                                data-ru-href="documents/agents_week_ru.pdf"
+                                data-en="📄 Download Certificate"
+                                data-ru="📄 Скачать сертификат"
+                                style="color: #4a9eff; text-decoration: underline; font-weight: 500;"
+                            >
+                                📄 Download Certificate
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -1533,6 +1584,14 @@
                             elem.textContent = text;
                         }
                     });
+
+                // Update language-dependent links (e.g., certificate downloads)
+                document.querySelectorAll("[data-en-href][data-ru-href]").forEach((elem) => {
+                    const href = elem.getAttribute(`data-${lang}-href`);
+                    if (href) {
+                        elem.href = href;
+                    }
+                });
 
                 // Update HTML lang attribute
                 document.documentElement.lang = lang === "ru" ? "ru" : "en";
