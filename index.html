@@ -653,6 +653,39 @@
                 font-weight: 500;
             }
 
+            .timeline-vk {
+                --experience-text: #bfc1d0;
+                --experience-heading: #d5d7e6;
+            }
+
+            [data-theme="light"] .timeline-vk {
+                --experience-text: #4a4a5a;
+                --experience-heading: #34364c;
+            }
+
+            .timeline-vk .timeline-description,
+            .timeline-vk .timeline-list li {
+                color: var(--experience-text);
+                font-size: 1rem;
+                line-height: 1.75;
+            }
+
+            .timeline-vk .timeline-description {
+                margin-bottom: 1.5rem;
+            }
+
+            .timeline-vk .timeline-subtitle {
+                color: var(--experience-heading);
+                font-size: 1.1rem;
+                font-weight: 600;
+                line-height: 1.5;
+                margin-bottom: 0.75rem;
+            }
+
+            .timeline-vk .timeline-list + .timeline-subtitle {
+                margin-top: 1.75rem;
+            }
+
             .timeline-skills {
                 display: flex;
                 flex-wrap: wrap;
@@ -1409,13 +1442,13 @@
             <div class="about-content fade-in">
                 <p class="about-text">
                     <span
-                        data-en="<span class='highlight'>Final-year Master's student at MIPT</span> (graduating 2026), working as a Machine Learning Engineer. ML experience across <span class='highlight'>4 Russian big tech companies</span>: VK, T-Bank, Sber AI, and Yandex - including 2 full-time roles and 2 R&D internships in core ML teams."
-                        data-ru="<span class='highlight'>Студент выпускного курса магистратуры МФТИ</span> (выпуск 2026), работаю инженером машинного обучения. Опыт в ML в <span class='highlight'>4 российских big tech компаниях</span>: VK, T-Bank, Sber AI и Yandex - включая 2 фул-тайм роли и 2 R&D стажировки в основных ML-командах."
+                        data-en="<span class='highlight'>MIPT Master's graduate</span> (2026), working as a Machine Learning Engineer. ML experience across <span class='highlight'>4 Russian big tech companies</span>: VK, T-Bank, Sber AI, and Yandex - including 2 full-time roles and 2 R&D internships in core ML teams."
+                        data-ru="<span class='highlight'>Выпускник магистратуры МФТИ</span> (2026), работаю инженером машинного обучения. Опыт в ML в <span class='highlight'>4 российских big tech компаниях</span>: VK, T-Bank, Sber AI и Yandex - включая 2 фул-тайм роли и 2 R&D стажировки в основных ML-командах."
                     >
                         <span class="highlight"
-                            >Final-year Master's student at MIPT</span
+                            >MIPT Master's graduate</span
                         >
-                        (graduating 2026), working as a Machine Learning
+                        (2026), working as a Machine Learning
                         Engineer. ML experience across
                         <span class="highlight"
                             >4 Russian big tech companies</span
@@ -1426,34 +1459,10 @@
                 <br />
                 <p class="about-text">
                     <span
-                        data-en="Main focus: <span class='highlight'>LLM, RAG and multimodal AI</span>. Comfortable owning ML projects end-to-end - from problem framing and training to deployment and online A/B validation. Key achievements: shipped a Transformer-based recommender to production with <span class='highlight'>+7% timespent</span> impact; distilled GPT-o3 into a compact LLM achieving <span class='highlight'>95% accuracy</span>."
-                        data-ru="Основной фокус: <span class='highlight'>LLM, RAG и мультимодальный ИИ</span>. Веду ML-проекты end-to-end - от постановки задачи и обучения до деплоя и онлайн A/B-валидации. Ключевые достижения: запустил Transformer-рекомендер в продакшн с приростом <span class='highlight'>+7% timespent</span>; дистиллировал GPT-o3 в компактную LLM с точностью <span class='highlight'>95%</span>."
+                        data-en="Main focus: <span class='highlight'>generative AI, LLMs and multimodal systems</span>. Comfortable owning ML projects end-to-end - from problem framing and training to deployment and online A/B validation. Key achievements: built a production banner-to-video ad pipeline delivering <span class='highlight'>+19% conversions and −11% CPA</span>; optimized video generation for <span class='highlight'>~4× speedup in benchmarks</span>."
+                        data-ru="Основной фокус: <span class='highlight'>генеративный ИИ, LLM и мультимодальные системы</span>. Веду ML-проекты end-to-end - от постановки задачи и обучения до деплоя и онлайн A/B-валидации. Ключевые достижения: создал продакшн-пайплайн превращения баннеров в видеорекламу с результатом <span class='highlight'>+19% конверсий и −11% CPA</span>; ускорил генерацию видео <span class='highlight'>примерно в 4 раза на бенчмарках</span>."
                     >
-                        Main focus:
-                        <span class="highlight">LLM, RAG and multimodal AI</span
-                        >. Comfortable owning ML projects end-to-end - from
-                        problem framing and training to deployment and online
-                        A/B validation. Key achievements: shipped a
-                        Transformer-based recommender to production with
-                        <span class="highlight">+7% timespent</span> impact;
-                        distilled GPT-o3 into a compact LLM achieving
-                        <span class="highlight">95% accuracy</span>.
-                    </span>
-                </p>
-                <br />
-                <p class="about-text">
-                    <span
-                        data-en="Currently exploring <span class='highlight'>Retrieval-Augmented Generation</span> systems for enterprise applications and <span class='highlight'>machine learning for audio</span>. Strong interest in bridging the gap between cutting-edge research and production systems."
-                        data-ru="Сейчас углубляюсь в системы <span class='highlight'>RAG (Retrieval-Augmented Generation)</span> для энтерпрайз-решений и <span class='highlight'>машинное обучение для аудио</span>. Сильный интерес к связи передовых исследований с продакшн-системами."
-                    >
-                        Currently exploring
-                        <span class="highlight"
-                            >Retrieval-Augmented Generation</span
-                        >
-                        systems for enterprise applications and
-                        <span class="highlight">machine learning for audio</span
-                        >. Strong interest in bridging the gap between
-                        cutting-edge research and production systems.
+                        Main focus: <span class='highlight'>generative AI, LLMs and multimodal systems</span>. Comfortable owning ML projects end-to-end - from problem framing and training to deployment and online A/B validation. Key achievements: built a production banner-to-video ad pipeline delivering <span class='highlight'>+19% conversions and −11% CPA</span>; optimized video generation for <span class='highlight'>~4× speedup in benchmarks</span>.
                     </span>
                 </p>
             </div>
@@ -1478,74 +1487,88 @@
                 </p>
             </div>
             <div class="timeline">
-                <div class="timeline-item fade-in">
+                <div class="timeline-item timeline-vk fade-in">
                     <div class="timeline-header">
                         <div>
-                            <span
-                                class="timeline-title"
-                                data-en="ML Engineer"
-                                data-ru="ML Инженер"
-                                >ML Engineer</span
-                            >
+                            <span class="timeline-title" data-en="ML Engineer" data-ru="ML Инженер">ML Engineer</span>
                             <span class="timeline-company"> @ AI VK</span>
                         </div>
-                        <span
-                            class="timeline-date"
-                            data-en="Sep 2025 – Present"
-                            data-ru="Сен 2025 – Настоящее время"
-                            >Sep 2025 – Present</span
-                        >
+                        <span class="timeline-date" data-en="Oct 2025 – Present" data-ru="Окт 2025 – Настоящее время">Oct 2025 – Present</span>
                     </div>
+                    <p class="timeline-description"
+                        data-en="Developing generative AI for advertising and LLM &amp; multimodal systems for VK Video, one of Russia’s largest video platforms with millions of daily users."
+                        data-ru="Разрабатываю генеративный ИИ для рекламы, а также LLM и мультимодальные системы для VK Видео — одной из крупнейших видеоплатформ России с миллионами ежедневных пользователей."
+                    >Developing generative AI for advertising and LLM &amp; multimodal systems for VK Video, one of Russia’s largest video platforms with millions of daily users.</p>
+                    <h3 class="timeline-subtitle"
+                        data-en="Generative AI for Advertising | July 2026 – Present"
+                        data-ru="Генеративный ИИ для рекламы | Июль 2026 – Настоящее время"
+                    >Generative AI for Advertising | July 2026 – Present</h3>
                     <div class="timeline-skills">
-                        <span class="skill-tag">YTsaurus</span>
+                        <span class="skill-tag">Go</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">PyTorch</span>
+                        <span class="skill-tag">vLLM-Omni</span>
+                        <span class="skill-tag">Temporal</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Kafka</span>
+                        <span class="skill-tag">S3</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">Prometheus</span>
+                    </div>
+                    <ul class="timeline-list">
+                    <li
+                        data-en="Built a production pipeline that transforms static banners into video ads through automated scriptwriting, image generation and video synthesis."
+                        data-ru="Создал продакшн-пайплайн преобразования статичных баннеров в видеорекламу с автоматической генерацией сценариев, изображений и видео."
+                    >Built a production pipeline that transforms static banners into video ads through automated scriptwriting, image generation and video synthesis.</li>
+                    <li
+                        data-en="Replaced template-based generation, increasing clicks by 33% and conversions by 19% while reducing CPC by 21% and CPA by 11%, with only 5% higher ad spend."
+                        data-ru="Заменил шаблонную генерацию: клики выросли на 33%, конверсии — на 19%, CPC снизился на 21%, CPA — на 11% при росте рекламных расходов всего на 5%."
+                    >Replaced template-based generation, increasing clicks by 33% and conversions by 19% while reducing CPC by 21% and CPA by 11%, with only 5% higher ad spend.</li>
+                    <li
+                        data-en="Optimized MiniMax H3 (TI2V) inference with vLLM-Omni, achieving ~4× faster generation in benchmarks through attention backend optimization and denoising-step tuning, and reducing per-GPU memory usage by 28% with tensor parallelism."
+                        data-ru="Оптимизировал инференс MiniMax H3 (TI2V) с vLLM-Omni: ускорил генерацию примерно в 4 раза на бенчмарках за счёт оптимизации attention-бэкенда и настройки числа шагов денойзинга; снизил потребление памяти на GPU на 28% с помощью тензорного параллелизма."
+                    >Optimized MiniMax H3 (TI2V) inference with vLLM-Omni, achieving ~4× faster generation in benchmarks through attention backend optimization and denoising-step tuning, and reducing per-GPU memory usage by 28% with tensor parallelism.</li>
+                    <li
+                        data-en="Implemented asynchronous generation workflows with Temporal, integrating model APIs, artifact storage and analytics."
+                        data-ru="Реализовал асинхронные процессы генерации на Temporal, объединив API моделей, хранилище артефактов и аналитику."
+                    >Implemented asynchronous generation workflows with Temporal, integrating model APIs, artifact storage and analytics.</li>
+                    </ul>
+                    <h3 class="timeline-subtitle"
+                        data-en="LLM &amp; Multimodal AI for VK Video | October 2025 – June 2026"
+                        data-ru="LLM и мультимодальный ИИ для VK Видео | Октябрь 2025 – Июнь 2026"
+                    >LLM &amp; Multimodal AI for VK Video | October 2025 – June 2026</h3>
+                    <div class="timeline-skills">
+                        <span class="skill-tag">PyTorch</span>
                         <span class="skill-tag">vLLM</span>
                         <span class="skill-tag">Kubernetes</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Docker</span>
                         <span class="skill-tag">Triton Inference Server</span>
                         <span class="skill-tag">TensorRT</span>
                         <span class="skill-tag">ONNX</span>
-                        <span class="skill-tag">DVC[S3]</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">DVC (S3)</span>
+                        <span class="skill-tag">YTsaurus</span>
                     </div>
                     <ul class="timeline-list">
-                        <li
-                            data-en="Fine-tuned LLM embedding models for retrieval tasks in VK Video; improved embedding quality on internal evaluation benchmarks."
-                            data-ru="Дообучал LLM эмбеддинг-модели для задач retrieval в VK Video; улучшил качество эмбеддингов на внутренних бенчмарках."
-                        >
-                            Fine-tuned LLM embedding models for retrieval tasks
-                            in VK Video; improved embedding quality on internal
-                            evaluation benchmarks.
-                        </li>
-                        <li
-                            data-en="Designed experimental pipeline and ran 100+ training experiments to systematically improve dataset diversity by 20%."
-                            data-ru="Разработал экспериментальный пайплайн и провел 100+ обучений для систематического улучшения разнообразия датасета на 20%."
-                        >
-                            Designed experimental pipeline and ran 100+ training
-                            experiments to systematically improve dataset
-                            diversity by 20%.
-                        </li>
-                        <li
-                            data-en="Developed multimodal content models for VK Video; achieved +14% recall at fixed precision of 0.9."
-                            data-ru="Разработал мультимодальные контентные модели для VK Video; достиг +14% recall при precision 0.9."
-                        >
-                            Developed multimodal content models for VK Video;
-                            achieved +14% recall at fixed precision of 0.9.
-                        </li>
-                        <li
-                            data-en="Distilled GPT-o3 into a relevance LLM with consistency recall 0.93 and precision 0.05."
-                            data-ru="Дистиллировал GPT-o3 в relevance LLM с показателями recall 0.93 и precision 0.05."
-                        >
-                            Distilled GPT-o3 into a relevance LLM with
-                            consistency recall 0.93 and precision 0.05.
-                        </li>
-                        <li
-                            data-en="Deployed models to production using Triton Inference Server with TensorRT and ONNX optimization for efficient inference."
-                            data-ru="Деплоил модели в продакшн на Triton Inference Server с оптимизацией через TensorRT и ONNX для эффективного инференса."
-                        >
-                            Deployed models to production using Triton Inference
-                            Server with TensorRT and ONNX optimization for
-                            efficient inference.
-                        </li>
+                    <li
+                        data-en="Fine-tuned LLM embedding models for retrieval, improving quality on internal relevance benchmarks."
+                        data-ru="Дообучал LLM эмбеддинг-модели для поиска, улучшив качество на внутренних бенчмарках релевантности."
+                    >Fine-tuned LLM embedding models for retrieval, improving quality on internal relevance benchmarks.</li>
+                    <li
+                        data-en="Designed a reproducible experimentation pipeline and conducted 100+ training experiments, expanding relevance dataset coverage and diversity."
+                        data-ru="Разработал воспроизводимый пайплайн экспериментов и провёл более 100 обучений, расширив охват и разнообразие датасета релевантности."
+                    >Designed a reproducible experimentation pipeline and conducted 100+ training experiments, expanding relevance dataset coverage and diversity.</li>
+                    <li
+                        data-en="Developed multimodal content models, improving recall by 14% at a fixed precision of 0.90."
+                        data-ru="Разработал мультимодальные контентные модели, повысив recall на 14% при фиксированном precision 0.90."
+                    >Developed multimodal content models, improving recall by 14% at a fixed precision of 0.90.</li>
+                    <li
+                        data-en="Distilled OpenAI o3 into a compact relevance LLM, achieving consistency recall of 0.93 and precision of 0.95 on internal evaluations."
+                        data-ru="Дистиллировал OpenAI o3 в компактную LLM для оценки релевантности, достигнув consistency recall 0.93 и precision 0.95 на внутренних оценках."
+                    >Distilled OpenAI o3 into a compact relevance LLM, achieving consistency recall of 0.93 and precision of 0.95 on internal evaluations.</li>
+                    <li
+                        data-en="Deployed production models with Triton Inference Server, using TensorRT and ONNX to optimize inference."
+                        data-ru="Развернул модели в продакшне на Triton Inference Server с оптимизацией инференса через TensorRT и ONNX."
+                    >Deployed production models with Triton Inference Server, using TensorRT and ONNX to optimize inference.</li>
                     </ul>
                 </div>
 
@@ -1779,7 +1802,9 @@
                         <span class="skill-item">GraphRAG</span>
                         <span class="skill-item">Qdrant</span>
                         <span class="skill-item">Vector Search</span>
-                        <span class="skill-item">Fine-tuning</span>
+                        <span class="skill-item">LLM Fine-Tuning</span>
+                        <span class="skill-item">Knowledge Distillation</span>
+                        <span class="skill-item">Information Retrieval</span>
                     </div>
                 </div>
 
@@ -1797,7 +1822,10 @@
                     <div class="skill-items">
                         <span class="skill-item">PyTorch</span>
                         <span class="skill-item">Transformers</span>
-                        <span class="skill-item">Multimodal Models</span>
+                        <span class="skill-item">Multimodal AI</span>
+                        <span class="skill-item">Generative AI</span>
+                        <span class="skill-item">Image Generation</span>
+                        <span class="skill-item">Video Synthesis</span>
                         <span class="skill-item">Diffusion Models</span>
                         <span class="skill-item">Audio ML</span>
                         <span class="skill-item">Whisper</span>
@@ -1815,7 +1843,15 @@
                     </h3>
                     <div class="skill-items">
                         <span class="skill-item">Python</span>
+                        <span class="skill-item">Go</span>
                         <span class="skill-item">Polars</span>
+                        <span class="skill-item">vLLM</span>
+                        <span class="skill-item">vLLM-Omni</span>
+                        <span class="skill-item">Inference Optimization</span>
+                        <span class="skill-item">Model Quantization</span>
+                        <span class="skill-item">GPU Computing</span>
+                        <span class="skill-item">Tensor Parallelism</span>
+                        <span class="skill-item">Production ML Systems</span>
                         <span class="skill-item">MLflow</span>
                         <span class="skill-item">Triton Inference Server</span>
                         <span class="skill-item">TensorRT</span>
@@ -1875,6 +1911,11 @@
                         <span class="skill-item">Kubernetes</span>
                         <span class="skill-item">FastAPI</span>
                         <span class="skill-item">Airflow</span>
+                        <span class="skill-item">Temporal</span>
+                        <span class="skill-item">Kafka</span>
+                        <span class="skill-item">S3</span>
+                        <span class="skill-item">Prometheus</span>
+                        <span class="skill-item">YTsaurus</span>
                         <span class="skill-item">PostgreSQL</span>
                         <span class="skill-item">DVC[S3]</span>
                         <span class="skill-item">Distributed Training</span>
@@ -2382,10 +2423,10 @@
                     </h3>
                     <div
                         class="edu-date"
-                        data-en="Sep 2024 – Jun 2026 (expected)"
-                        data-ru="Сен 2024 – Июн 2026 (ожидается)"
+                        data-en="Sep 2024 – Jun 2026"
+                        data-ru="Сен 2024 – Июн 2026"
                     >
-                        Sep 2024 – Jun 2026 (expected)
+                        Sep 2024 – Jun 2026
                     </div>
                     <p
                         class="edu-description"
